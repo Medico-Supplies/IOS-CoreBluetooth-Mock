@@ -9,6 +9,17 @@
 [![GitHub forks](https://img.shields.io/github/forks/nordicsemi/IOS-CoreBluetooth-Mock)](https://github.com/nordicsemi/IOS-CoreBluetooth-Mock/members)
 [![GitHub contributors](https://img.shields.io/github/contributors/nordicsemi/IOS-CoreBluetooth-Mock)](https://github.com/nordicsemi/IOS-CoreBluetooth-Mock/graphs/contributors)
 
+### Update - Build
+
+Run a test build using, also note the dependencies are fixed
+
+```sh
+# use xcodebuild -list to show the schemes
+xcodebuild build-for-testing \
+  -scheme CoreBluetoothMock \
+  -destination 'platform=iOS Simulator,name=iPhone 17'
+```
+
 The *Core Bluetooth Mock* library was designed to emulate *Core Bluetooth* objects, providing easy way to test 
 Bluetooth-enabled apps. As the native Bluetooth API is not supported on a simulator, using this library you can run, test 
 and take screenshots of such apps without the need of a physical phone or tablet. You may also start working on the
